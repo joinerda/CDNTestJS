@@ -1,4 +1,4 @@
-module.exports = (req, res) => {
+function generateRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    res.status(200).json({ number: randomNumber });
-};
+    return JSON.stringify({ number: randomNumber });
+}
