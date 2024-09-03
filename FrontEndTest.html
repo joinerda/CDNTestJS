@@ -10,14 +10,11 @@
     <button id="generateButton">Generate Random Number</button>
     <p id="randomNumber"></p>
 
+    <script src="https://cdn.jsdelivr.net/gh/yourusername/your-repo-name/random.js"></script>
     <script>
         document.getElementById("generateButton").addEventListener("click", function() {
-            fetch('https://cdn.jsdelivr.net/gh/joinerda/CDNTestJS@main/random.js')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("randomNumber").textContent = "Random Number: " + data.number;
-                })
-                .catch(error => console.error('Error:', error));
+            const result = JSON.parse(generateRandomNumber());
+            document.getElementById("randomNumber").textContent = "Random Number: " + result.number;
         });
     </script>
 </body>
