@@ -12,7 +12,7 @@
 
     <script>
         document.getElementById("generateButton").addEventListener("click", function() {
-            fetch('https://your-cdn-url/random')
+            fetch('https://cdn.jsdelivr.net/gh/joinerda/CDNTestJS@main/random.js')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("randomNumber").textContent = "Random Number: " + data.number;
